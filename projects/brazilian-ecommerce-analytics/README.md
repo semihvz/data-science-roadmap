@@ -22,8 +22,9 @@ Brezilya'nın en büyük e-ticaret pazar yerlerinden biri olan **Olist** platfor
   - [Ürün Kategori Zekası (Pareto 80/20 & ABC)](#ürün-kategori-zekası-pareto-8020--abc)
 - [5. Üretim SQL Sorguları (Production SQL)](#5-üretim-sql-sorguları-production-sql)
 - [6. İnteraktif Streamlit Web Dashboard](#6-interaktif-streamlit-web-dashboard)
-- [7. Kurulum ve Çalıştırma](#7-kurulum-ve-çalıştırma)
-- [8. Proje Dizin Yapısı](#8-proje-dizin-yapısı)
+- [7. Veri Analisti Müfredat Dökümantasyon Serisi](#7-veri-analisti-müfredat-dökümantasyon-serisi)
+- [8. Kurulum ve Çalıştırma](#8-kurulum-ve-çalıştırma)
+- [9. Proje Dizin Yapısı](#9-proje-dizin-yapısı)
 
 ---
 
@@ -171,7 +172,23 @@ Platform, modern karanlık tema ve Plotly grafikleri ile donatılmış tam teşe
 
 ---
 
-## 7. Kurulum ve Çalıştırma
+## 7. Veri Analisti Müfredat Dökümantasyon Serisi 🎓
+
+Bu proje, ana repodaki **15 Modüllük Veri Analisti Uzmanlık Müfredatı (Data Analyst Track)** ile birebir uyumlu olacak şekilde baştan sona dokümante edilmiştir:
+
+| Bölüm / Rehber | İlgili Müfredat Modülleri | Kapsam ve İçerik |
+| :--- | :--- | :--- |
+| 🗺️ [**Müfredat Haritası & Eşleme**](docs/curriculum_guide/00_mufredat_haritasi.md) | Tüm Modüller (1 - 15) | 15 modülün Olist projesindeki somut karşılıkları ve öğrenme rehberi. |
+| 📘 [**1. İş Problemi & KPI Mimarisi**](docs/curriculum_guide/01_is_problemi_ve_kpi_mimarisi.md) | Modül 1 (İş Problemi & KPI), Modül 2 (Finansal Mantık) | Pazar yeri iş modeli, GMV vs Net Ciro, AOV, İptal Oranı, SLA Gecikme Metriği. |
+| 📘 [**2. Veri Kalitesi & Veritabanı**](docs/curriculum_guide/02_veri_kalitesi_ve_iliskisel_veritabani.md) | Modül 3 (Kalite & ETL), Modül 4 (İlişkisel DB & ERD) | `customer_id` vs `customer_unique_id` ayrımı, 1M satırlık centroid tekilleştirme, B-Tree indeksler. |
+| 📘 [**3. SQL ile Veri Analitiği**](docs/curriculum_guide/03_sql_uzmanligi_temelden_ileriye.md) | Modül 5 (Temel), Modül 6 (Orta), Modül 7 (İleri SQL) | `GROUP BY`, çoklu `LEFT JOIN`, CTE'ler, Window Functions (`LAG`, `NTILE`, koşan toplam). |
+| 📘 [**4. İstatistik & EDA**](docs/curriculum_guide/04_istatistik_ve_kesifsel_veri_analizi.md) | Modül 8 (İstatistik), Modül 9 (Python ile Analiz) | Sağa çarpık dağılım, IQR aykırı değer analizi, gecikme-puan korelasyonu (r = -0.58) ve hipotez testi. |
+| 📘 [**5. İleri Analitik Teknikler**](docs/curriculum_guide/05_ileri_analitik_rfm_cohort_pareto.md) | Modül 10 (Görselleştirme), 11 (BI), 12 (İleri Analitik) | RFM segmentasyonu (9 persona), Aylık Kohort Tutundurma Matrisi, Pareto 80/20 ve taksit modelleri. |
+| 📘 [**6. Veri Hikayeciliği & Mülakat**](docs/curriculum_guide/06_veri_hikayeciligi_ve_mulakat_rehberi.md) | Modül 14 (Data Storytelling), Modül 15 (Mülakat Hazırlığı) | C-Level 3 dakikalık sunum, STAR tekniği ile proje anlatımı, 10 teknik + 5 iş mülakat sorusu ve yanıtları. |
+
+---
+
+## 8. Kurulum ve Çalıştırma
 
 ### Gereksinimleri Yükleme
 ```bash
@@ -203,13 +220,15 @@ Tarayıcınızda `http://localhost:8501` adresine giderek interaktif paneli kull
 
 ---
 
-## 8. Proje Dizin Yapısı
+## 9. Proje Dizin Yapısı
 
 ```
 projects/brazilian-ecommerce-analytics/
 ├── data/
 │   ├── raw/                 # Kaggle Olist CSV veri setleri (9 dosya)
 │   └── olist.db             # İndekslenmiş SQLite ilişkisel veritabanı (100% Saf SQL Mimarisi)
+├── docs/
+│   └── curriculum_guide/    # Veri analisti 15 modüllük müfredat dökümantasyon serisi (0-6)
 ├── sql/
 │   ├── schema.sql           # DDL şeması ve indeks tanımları
 │   ├── analytical_views.sql # Yıldız şema tarzı analitik görünümler (Views)
