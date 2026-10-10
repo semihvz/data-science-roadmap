@@ -40,6 +40,11 @@ Veri Analizi ve Veri Bilimi alanlarında sıfırdan uzmanlığa uzanan 24 kapsam
 - **DS-48**: System Design for ML (MLSys Mimarisi)
 - 📄 [data-science-curriculum.pdf](./data-science-curriculum.pdf)
 
+### 🚀 3. Gerçek Dünya Analitik & Mühendislik Projeleri (Projects)
+- **[Brazilian E-Commerce Analytics](./projects/brazilian-ecommerce-analytics)**: Kaggle Olist Brezilya E-Ticaret veri tabanı üzerinde SQLite ilişkisel modelleme, RFM müşteri segmentasyonu, kohort tutundurma, lojistik SLA analizi, Pareto 80/20 ve interaktif Streamlit BI web paneli.
+- **[Crypto Sector Flow Radar](./projects/crypto-sector-flow)**: Binance Futures üzerinde sektör bazlı sermaye rotasyonu ve kümülatif hacim deltası (CVD) takip motoru.
+- **[Quant Data Backtest](./projects/data-backtest)**: Yüksek hızlı piyasa verisi işleme ve algoritmik strateji simülasyon altyapısı.
+
 ---
 
 ## 💻 Web Sitesini Yerelde Çalıştırma

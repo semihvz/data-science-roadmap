@@ -1,0 +1,7 @@
+# Analytics modules package
+from .sales_kpi import compute_overview_kpis, compute_monthly_sales_trend, compute_state_distribution
+from .rfm_segmentation import calculate_rfm_metrics, segment_customers, compute_cohort_retention, get_segment_playbook
+from .logistics_sla import compute_logistics_kpis, analyze_regional_logistics, delay_impact_on_reviews
+from .satisfaction_reviews import compute_review_distribution, compute_nps_proxy
+from .payments_finance import compute_payment_method_breakdown, analyze_installments
+from .product_intelligence import compute_category_pareto, top_categories_metrics
