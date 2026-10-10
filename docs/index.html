@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Science & Data Analyst Mastery Roadmap | semihvz</title>
-  <meta name="description" content="Veri Analizi ve Veri Bilimi için uçtan uca hazırlanan 24 kapsamlı ders modülü, PDF müfredatları ve interaktif kariyer yol haritası.">
+  <meta name="description" content="Veri Analizi ve Veri Bilimi için uçtan uca hazırlanan 26 kapsamlı ders modülü, PDF müfredatları ve interaktif kariyer yol haritası.">
   <meta name="keywords" content="Data Science, Data Analyst, SQL, Python, Machine Learning, Power BI, Statistics, Roadmap">
   <meta name="author" content="semihvz">
 
@@ -73,7 +73,7 @@
       </h1>
 
       <p class="hero-subtitle">
-        İş problemlerini analitik metriklere dönüştürmekten ileri düzey SQL sorgularına, Python ile Keşifçi Veri Analizinden Machine Learning Sistem Tasarımlarına (MLSys) uzanan 24 modüllük uçtan uca müfredat.
+        İş problemlerini analitik metriklere dönüştürmekten ileri düzey SQL sorgularına, Python ile Keşifçi Veri Analizinden Machine Learning Sistem Tasarımlarına (MLSys) uzanan 26 modüllük uçtan uca müfredat.
       </p>
 
       <div class="hero-cta">
@@ -84,7 +84,7 @@
           </svg>
           Modülleri Keşfet
         </a>
-        <a href="data-analyst-curriculum.pdf" download class="btn-secondary">
+        <a href="data-analyst-curriculum.pdf" target="_blank" download class="btn-secondary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
@@ -92,7 +92,7 @@
           </svg>
           Analist Müfredatı (PDF)
         </a>
-        <a href="data-science-curriculum.pdf" download class="btn-secondary">
+        <a href="data-science-curriculum.pdf" target="_blank" download class="btn-secondary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
@@ -105,7 +105,7 @@
       <!-- Stats Grid -->
       <div class="hero-stats">
         <div class="stat-card">
-          <div class="stat-number">24</div>
+          <div class="stat-number">26</div>
           <div class="stat-label">Detaylı Eğitim Modülü</div>
         </div>
         <div class="stat-card">
@@ -113,7 +113,7 @@
           <div class="stat-label">Data Analyst Kulvarı</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">9</div>
+          <div class="stat-number">11</div>
           <div class="stat-label">Data Scientist Kulvarı</div>
         </div>
         <div class="stat-card">
@@ -143,7 +143,7 @@
         </div>
       </div>
       <div style="text-align: right; min-width: 140px;">
-        <span id="completedCountText" style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; color: var(--secondary);">0 / 24 Modül (%0)</span>
+        <span id="completedCountText" style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; color: var(--secondary);">0 / 26 Modül (%0)</span>
       </div>
     </div>
 
@@ -157,7 +157,7 @@
             <rect x="14" y="14" width="7" height="7"></rect>
             <rect x="3" y="14" width="7" height="7"></rect>
           </svg>
-          Tüm Modüller (24)
+          Tüm Modüller (26)
         </button>
         <button class="track-tab" data-track="analyst">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -171,7 +171,7 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.5A2 2 0 0 0 6.5 23.5h11a2 2 0 0 0 1.78-3L14.21 10.423a2 2 0 0 1-.21-.896V2"></path>
           </svg>
-          Data Scientist Track (9)
+          Data Scientist Track (11)
         </button>
       </div>
     </div>
@@ -299,12 +299,17 @@
           </svg>
           <span class="modal-title" id="modalTitle">Modül PDF Detayı</span>
         </div>
-        <button class="modal-close-btn" id="modalCloseBtn" title="Kapat">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <a id="modalExternalBtn" href="#" target="_blank" class="btn-github" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">
+            Yeni Sekmede Aç ↗
+          </a>
+          <button class="modal-close-btn" id="modalCloseBtn" title="Kapat">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
       </div>
       <div class="modal-body">
         <iframe src="about:blank" id="modalIframe" class="modal-iframe"></iframe>
@@ -319,8 +324,8 @@
         © 2026 Data Science & Data Analyst Mastery Roadmap. All rights reserved.
       </div>
       <ul class="footer-links">
-        <li><a href="data-analyst-curriculum.pdf" download class="footer-link">Analist Müfredatı</a></li>
-        <li><a href="data-science-curriculum.pdf" download class="footer-link">Bilimci Müfredatı</a></li>
+        <li><a href="data-analyst-curriculum.pdf" target="_blank" download class="footer-link">Analist Müfredatı</a></li>
+        <li><a href="data-science-curriculum.pdf" target="_blank" download class="footer-link">Bilimci Müfredatı</a></li>
         <li><a href="https://github.com/semihvz/data-science-roadmap" target="_blank" class="footer-link">GitHub Repository</a></li>
       </ul>
     </div>

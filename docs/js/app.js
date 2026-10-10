@@ -277,6 +277,36 @@ const modulesData = [
   {
     id: "ds-4",
     track: "scientist",
+    number: "DS-04",
+    title: "Pandas ile İleri Veri Manipülasyonu",
+    category: "python",
+    desc: "Büyük veri setleri üzerinde performanslı Pandas operasyonları, Reshaping, Pivot Table ve Time-Series.",
+    syllabus: [
+      "Pandas Categorical Data & Memory Optimization",
+      "Time-Series Handling (Resampling, Rolling Windows)",
+      "MultiIndex ve Advanced GroupBy Aggregations"
+    ],
+    chips: ["Pandas", "Data Wrangling", "Time Series", "EDA"],
+    pdfPath: "data-scientist/04_Pandas_Ayrintili_Konu_Anlatimi.pdf"
+  },
+  {
+    id: "ds-5",
+    track: "scientist",
+    number: "DS-05",
+    title: "Veri Bilimi İçin İleri SQL",
+    category: "sql",
+    desc: "Veri bilimi projelerine özel SQL analitiği, Feature Extraction ve Veritabanı İçi Dönüşümler.",
+    syllabus: [
+      "Feature Engineering via SQL Queries",
+      "Cohort & RFM Matrix Generation in SQL",
+      "Analytical Window Functions for Time Series"
+    ],
+    chips: ["SQL", "Feature Engineering", "Analytics", "Database"],
+    pdfPath: "data-scientist/05_SQL_Ayrintili_Konu_Anlatimi.pdf"
+  },
+  {
+    id: "ds-6",
+    track: "scientist",
     number: "DS-11",
     title: "A/B Testing & Deneysel Tasarım",
     category: "stats",
@@ -290,7 +320,7 @@ const modulesData = [
     pdfPath: "data-scientist/11_AB_Testing_Ayrintili_Konu_Anlatimi.pdf"
   },
   {
-    id: "ds-5",
+    id: "ds-7",
     track: "scientist",
     number: "DS-14",
     title: "Machine Learning Temelleri & Modelleme",
@@ -305,7 +335,7 @@ const modulesData = [
     pdfPath: "data-scientist/14_Machine_Learning_Temelleri_Ayrintili_Konu_Anlatimi.pdf"
   },
   {
-    id: "ds-6",
+    id: "ds-8",
     track: "scientist",
     number: "DS-44",
     title: "Data Ethics, Governance & Privacy",
@@ -320,7 +350,7 @@ const modulesData = [
     pdfPath: "data-scientist/44_Data_Ethics_Governance_Ayrintili_Konu_Anlatimi.pdf"
   },
   {
-    id: "ds-7",
+    id: "ds-9",
     track: "scientist",
     number: "DS-46",
     title: "Portfolio & GitHub Stratejisi",
@@ -335,7 +365,7 @@ const modulesData = [
     pdfPath: "data-scientist/46_Portfolio_GitHub_Ayrintili_Konu_Anlatimi.pdf"
   },
   {
-    id: "ds-8",
+    id: "ds-10",
     track: "scientist",
     number: "DS-47",
     title: "Data Science Interview Preparation",
@@ -350,7 +380,7 @@ const modulesData = [
     pdfPath: "data-scientist/47_Data_Science_Interview_Ayrintili_Konu_Anlatimi.pdf"
   },
   {
-    id: "ds-9",
+    id: "ds-11",
     track: "scientist",
     number: "DS-48",
     title: "System Design for ML (MLSys Mimarisi)",
@@ -532,7 +562,7 @@ function renderModules() {
             </svg>
             İncele (PDF)
           </button>
-          <a class="btn-card-download" href="${mod.pdfPath}" download title="PDF İndir">
+          <a class="btn-card-download" href="${mod.pdfPath}" target="_blank" download title="PDF İndir / Aç">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
               <polyline points="7 10 12 15 17 10"></polyline>
@@ -571,11 +601,17 @@ function openPdfModal(pdfUrl, title) {
   const backdrop = document.getElementById('modalBackdrop');
   const iframe = document.getElementById('modalIframe');
   const modalTitle = document.getElementById('modalTitle');
+  const modalExternalBtn = document.getElementById('modalExternalBtn');
 
   if (!backdrop || !iframe) return;
 
   modalTitle.textContent = title;
   iframe.src = pdfUrl;
+
+  if (modalExternalBtn) {
+    modalExternalBtn.href = pdfUrl;
+  }
+
   backdrop.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
