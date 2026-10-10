@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kripto Sektörel Para Akımı & Sermaye Rotasyonu Radarı</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #090D16;
+            --card-bg: rgba(17, 24, 39, 0.75);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --green: #10B981;
+            --green-glow: rgba(16, 185, 129, 0.2);
+            --red: #F43F5E;
+            --red-glow: rgba(244, 63, 94, 0.2);
+            --accent-blue: #38BDF8;
+            --accent-purple: #818CF8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 2rem 2.5rem;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(129, 140, 248, 0.08) 0%, transparent 40%);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .header-title h1 {
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #FFFFFF 30%, #94A3B8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .header-title p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 0.3rem;
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .timeframe-group {
+            display: flex;
+            background: rgba(30, 41, 59, 0.7);
+            border-radius: 8px;
+            padding: 4px;
+            border: 1px solid var(--card-border);
+        }
+
+        .tf-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .tf-btn.active {
+            background: var(--accent-blue);
+            color: #0F172A;
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+        }
+
+        .refresh-btn {
+            background: linear-gradient(135deg, #1E293B, #0F172A);
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .refresh-btn:hover {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+        }
+
+        /* Top Metric Cards */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1.25rem 1.4rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .metric-label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .metric-value {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-top: 0.4rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .metric-sub {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* Signals Container */
+        .signals-box {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            border-left: 4px solid #F59E0B;
+            border-radius: 10px;
+            padding: 1rem 1.4rem;
+            margin-bottom: 2rem;
+        }
+
+        .signals-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #FBBF24;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .signals-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .signal-item {
+            font-size: 0.85rem;
+            color: #E2E8F0;
+        }
+
+        /* Main Sector Flow Cards Table */
+        .sectors-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .sector-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1.2rem 1.6rem;
+            display: grid;
+            grid-template-columns: 2fr 1.5fr 1fr 1fr 1.8fr 1fr;
+            align-items: center;
+            gap: 1.5rem;
+            transition: all 0.2s;
+        }
+
+        .sector-card:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            background: rgba(24, 32, 50, 0.85);
+        }
+
+        .sec-info h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        .sec-info p {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+
+        .sec-inflow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-align: right;
+        }
+
+        .sec-inflow.positive {
+            color: var(--green);
+            text-shadow: 0 0 12px var(--green-glow);
+        }
+
+        .sec-inflow.negative {
+            color: var(--red);
+            text-shadow: 0 0 12px var(--red-glow);
+        }
+
+        .progress-bar-wrap {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 0.4rem;
+        }
+
+        .progress-bar {
+            height: 100%;
+            border-radius: 3px;
+        }
+
+        .badge-mvp {
+            background: rgba(56, 189, 248, 0.15);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--accent-blue);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-family: 'JetBrains Mono', monospace;
+            display: inline-block;
+        }
+
+        .status-pill {
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-pill.bull {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--green);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .status-pill.bear {
+            background: rgba(244, 63, 94, 0.15);
+            color: var(--red);
+            border: 1px solid rgba(244, 63, 94, 0.3);
+        }
+
+        .footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.82rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-title">
+            <h1>⚡ Kripto Sektörel Para Akımı Radarı</h1>
+            <p>Binance Futures Taker Volume Delta (Net CVD) ile An Be An Sermaye Rotasyonu</p>
+        </div>
+        <div class="controls">
+            <div class="timeframe-group">
+                <button class="tf-btn" onclick="setTimeframe('15m')">15M</button>
+                <button class="tf-btn active" onclick="setTimeframe('1h')">1H</button>
+                <button class="tf-btn" onclick="setTimeframe('4h')">4H</button>
+            </div>
+            <button class="refresh-btn" onclick="fetchData()">
+                <span id="refresh-icon">🔄</span> Yenile (<span id="countdown">15</span>s)
+            </button>
+        </div>
+    </div>
+
+    <!-- Summary KPI Row -->
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <div class="metric-label">Piyasa Net Taker Akımı</div>
+            <div class="metric-value" id="kpi-market-net">$0</div>
+            <div class="metric-sub" id="kpi-market-vol">Hacim: $0</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-label">En Çok Para Çeken Sektör</div>
+            <div class="metric-value" style="color: var(--green);" id="kpi-top-sector">-</div>
+            <div class="metric-sub" id="kpi-top-amount">+0 USD</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-label">En Çok Para Kaybeden Sektör</div>
+            <div class="metric-value" style="color: var(--red);" id="kpi-bottom-sector">-</div>
+            <div class="metric-sub" id="kpi-bottom-amount">-0 USD</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-label">Lider Token (Odak Noktası)</div>
+            <div class="metric-value" style="color: var(--accent-blue);" id="kpi-mvp-token">-</div>
+            <div class="metric-sub" id="kpi-mvp-amount">+0 USD</div>
+        </div>
+    </div>
+
+    <!-- Live Signals Alerts Box -->
+    <div class="signals-box" id="signals-box" style="display: none;">
+        <div class="signals-title">🚨 Canlı Algoritmik Sinyaller & Para Girişi Uyarıları</div>
+        <div class="signals-list" id="signals-list"></div>
+    </div>
+
+    <!-- Sector Flow List -->
+    <div class="sectors-container" id="sectors-list">
+        <!-- Rendered via JS -->
+    </div>
+
+    <div class="footer">
+        Veriler doğrudan Binance USDⓈ-M Vadeli İşlemler WebSocket/REST Klines API'si üzerinden Taker Alıcı/Satıcı hacim farkıyla hesaplanmaktadır.
+    </div>
+
+    <script>
+        let currentTimeframe = '1h';
+        let countdownTimer = 15;
+
+        function setTimeframe(tf) {
+            currentTimeframe = tf;
+            document.querySelectorAll('.tf-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            fetchData();
+        }
+
+        async function fetchData() {
+            countdownTimer = 15;
+            document.getElementById('refresh-icon').style.transform = 'rotate(180deg)';
+            try {
+                const res = await fetch(`/api/flows?timeframe=${currentTimeframe}`);
+                const data = await res.json();
+                renderData(data);
+            } catch (err) {
+                console.error("Veri çekilemedi:", err);
+            } finally {
+                setTimeout(() => {
+                    document.getElementById('refresh-icon').style.transform = 'rotate(0deg)';
+                }, 300);
+            }
+        }
+
+        function formatMoney(num) {
+            const abs = Math.abs(num);
+            if (abs >= 1e9) return (num / 1e9).toFixed(2) + "B";
+            if (abs >= 1e6) return (num / 1e6).toFixed(2) + "M";
+            if (abs >= 1e3) return (num / 1e3).toFixed(1) + "K";
+            return num.toLocaleString();
+        }
+
+        function renderData(data) {
+            const sectors = data.sectors;
+            const signals = data.signals;
+
+            if (!sectors || sectors.length === 0) return;
+
+            // KPI Cards
+            const marketNet = sectors.reduce((acc, s) => acc + s.net_inflow_usdt, 0);
+            const marketVol = sectors.reduce((acc, s) => acc + s.total_volume_usdt, 0);
+            const topSec = sectors[0];
+            const bottomSec = sectors[sectors.length - 1];
+
+            document.getElementById('kpi-market-net').innerText = (marketNet >= 0 ? "+$" : "-$") + formatMoney(Math.abs(marketNet));
+            document.getElementById('kpi-market-net').style.color = marketNet >= 0 ? 'var(--green)' : 'var(--red)';
+            document.getElementById('kpi-market-vol').innerText = "Toplam Hacim: $" + formatMoney(marketVol);
+
+            document.getElementById('kpi-top-sector').innerText = topSec.sector;
+            document.getElementById('kpi-top-amount').innerText = "+$" + formatMoney(topSec.net_inflow_usdt);
+
+            document.getElementById('kpi-bottom-sector').innerText = bottomSec.sector;
+            document.getElementById('kpi-bottom-amount').innerText = "-$" + formatMoney(Math.abs(bottomSec.net_inflow_usdt));
+
+            document.getElementById('kpi-mvp-token').innerText = topSec.mvp_symbol;
+            document.getElementById('kpi-mvp-amount').innerText = "+$" + formatMoney(topSec.mvp_net_inflow);
+
+            // Signals
+            const sigBox = document.getElementById('signals-box');
+            const sigList = document.getElementById('signals-list');
+            if (signals && signals.length > 0) {
+                sigBox.style.display = 'block';
+                sigList.innerHTML = signals.map(s => `
+                    <div class="signal-item">
+                        <strong>${s.type}</strong>: ${s.message}
+                    </div>
+                `).join('');
+            } else {
+                sigBox.style.display = 'none';
+            }
+
+            // Sectors List
+            const listEl = document.getElementById('sectors-list');
+            listEl.innerHTML = sectors.map((s, idx) => {
+                const isPositive = s.net_inflow_usdt >= 0;
+                const buyPct = s.buy_ratio_pct;
+                const pricePct = s.avg_price_change_pct;
+
+                return `
+                    <div class="sector-card">
+                        <div class="sec-info">
+                            <h3>#${idx + 1} ${s.sector}</h3>
+                            <p>${s.description}</p>
+                        </div>
+
+                        <div>
+                            <div class="sec-inflow ${isPositive ? 'positive' : 'negative'}">
+                                ${isPositive ? '+' : '-'}$${formatMoney(Math.abs(s.net_inflow_usdt))}
+                            </div>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="width: ${buyPct}%; background: ${isPositive ? 'var(--green)' : 'var(--red)'};"></div>
+                            </div>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <div style="font-size: 0.95rem; font-weight: 700; color: ${isPositive ? 'var(--green)' : 'var(--red)'}; font-family: 'JetBrains Mono';">
+                                %${buyPct.toFixed(1)}
+                            </div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted);">Alıcı Baskısı</div>
+                        </div>
+
+                        <div style="text-align: right;">
+                            <div style="font-size: 0.95rem; font-weight: 700; color: ${pricePct >= 0 ? 'var(--green)' : 'var(--red)'}; font-family: 'JetBrains Mono';">
+                                ${pricePct >= 0 ? '+' : ''}%${pricePct.toFixed(2)}
+                            </div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted);">$${formatMoney(s.total_volume_usdt)}</div>
+                        </div>
+
+                        <div>
+                            <span class="badge-mvp">${s.mvp_symbol}</span>
+                            <span style="font-size: 0.78rem; color: var(--text-muted); margin-left: 4px;">+$${formatMoney(s.mvp_net_inflow)}</span>
+                        </div>
+
+                        <div style="text-align: right;">
+                            <span class="status-pill ${isPositive ? 'bull' : 'bear'}">
+                                ${s.sentiment}
+                            </span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Auto Refresh Countdown
+        setInterval(() => {
+            countdownTimer--;
+            document.getElementById('countdown').innerText = countdownTimer;
+            if (countdownTimer <= 0) {
+                fetchData();
+            }
+        }, 1000);
+
+        // Initial Load
+        fetchData();
+    </script>
+</body>
+</html>

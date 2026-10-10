@@ -1,0 +1,34 @@
+{
+  "AI & Big Data": {
+    "description": "Yapay zeka modelleri, veri pazarları ve GPU hesaplama ağları",
+    "symbols": ["NEARUSDT", "WLDUSDT", "ARPAUSDT", "RENDERUSDT", "GRTUSDT", "FETUSDT", "TAOUSDT", "IOUSDT"]
+  },
+  "Zero-Knowledge & Privacy": {
+    "description": "Sıfır bilgi ispatı (ZK-SNARKs), gizlilik ve hafif blokzincir altyapıları",
+    "symbols": ["MINAUSDT", "MANTAUSDT", "DUSKUSDT", "ZECUSDT", "ZENUSDT", "SCRUSDT"]
+  },
+  "Layer-2 & Modular": {
+    "description": "Ethereum ölçekleme katmanları, Rollup'lar ve modüler veri kullanılabilirliği",
+    "symbols": ["ARBUSDT", "OPUSDT", "STRKUSDT", "TIAUSDT", "METISUSDT", "POLUSDT"]
+  },
+  "Real World Assets (RWA)": {
+    "description": "Geleneksel finansal varlıkların ve tahvillerin blokzincir tokenizasyonu",
+    "symbols": ["LUMIAUSDT", "ONDOUSDT", "OMUSDT", "PENDLEUSDT", "TRUUSDT"]
+  },
+  "DeFi & DEX": {
+    "description": "Merkeziyetsiz borç alma/verme, borsa ve likidite protokolleri",
+    "symbols": ["UNIUSDT", "AAVEUSDT", "CRVUSDT", "MKRUSDT", "INJUSDT", "DYDXUSDT", "ENAUSDT"]
+  },
+  "High-Performance L1": {
+    "description": "Yüksek işlem kapasiteli monolitik alternatif Layer 1 blokzincirleri",
+    "symbols": ["SOLUSDT", "SUIUSDT", "APTUSDT", "AVAXUSDT", "SEIUSDT", "TONUSDT"]
+  },
+  "Meme Coins": {
+    "description": "Yüksek volatiliteye sahip topluluk odaklı meme token'ları",
+    "symbols": ["DOGEUSDT", "SHIBUSDT", "PEPEUSDT", "WIFUSDT", "FLOKIUSDT", "BOMEUSDT"]
+  },
+  "Gaming & Metaverse": {
+    "description": "Web3 oyunları, NFT ekosistemleri ve metaverse projeleri",
+    "symbols": ["GALAUSDT", "SANDUSDT", "AXSUSDT", "IMXUSDT", "BEAMXUSDT"]
+  }
+}

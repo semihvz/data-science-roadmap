@@ -1,0 +1,11 @@
+customer_id,customer_name,city,acquisition_channel,total_orders_placed,total_lifetime_spend,avg_spend_per_order,first_order_date,latest_order_date
+327,Ali Ozdemir,Istanbul,Organic Search,8,6869.39,858.67,2025-04-16 17:00:00,2026-01-26 01:00:00
+1035,Burak Yildiz,Kocaeli,Direct,11,6761.16,614.65,2025-04-09 01:00:00,2026-01-23 15:00:00
+321,Ali Kara,Adana,Paid Ad,7,5857.92,836.85,2025-10-12 01:00:00,2026-02-11 12:00:00
+119,Burak Kara,Ankara,Paid Ad,5,5583.49,1116.7,2026-01-15 07:00:00,2026-02-09 11:00:00
+1087,Kerem Kilic,Bursa,Direct,4,5491.58,1372.89,2025-10-08 17:00:00,2026-02-09 22:00:00
+883,Murat Celik,Kocaeli,Direct,5,5399.06,1079.81,2025-03-04 21:00:00,2026-01-20 05:00:00
+749,Zeynep Kilic,Bursa,Direct,6,5211.84,868.64,2024-09-25 18:00:00,2025-12-04 10:00:00
+1137,Gamze Ozkan,Izmir,Social Media,6,5136.77,856.13,2025-06-06 01:00:00,2026-01-19 23:00:00
+98,Kerem Polat,Adana,Paid Ad,5,5127.59,1025.52,2025-12-06 05:00:00,2026-02-17 08:00:00
+877,Zeynep Aslan,Istanbul,Organic Search,6,4897.2,816.2,2024-08-26 05:00:00,2026-02-21 17:00:00
