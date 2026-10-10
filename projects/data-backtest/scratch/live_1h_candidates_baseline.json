@@ -1,0 +1,111 @@
+{
+  "monitoring_start_trt": "2026-10-08 08:23:52",
+  "monitoring_start_utc": "2026-10-08 05:24:09",
+  "candidates": {
+    "CTRUSDT": {
+      "start_time_utc": "2026-10-08 05:06:00",
+      "start_price": 0.012968,
+      "start_volume": 190.410801,
+      "high": 0.012981,
+      "low": 0.012961
+    },
+    "AVAAIUSDT": {
+      "start_time_utc": "2026-10-08 05:05:00",
+      "start_price": 0.009466,
+      "start_volume": 2774.875537,
+      "high": 0.009471,
+      "low": 0.009456
+    },
+    "BRKBUSDT": {
+      "start_time_utc": "2026-10-08 05:06:00",
+      "start_price": 506.72,
+      "start_volume": 0.0,
+      "high": 506.72,
+      "low": 506.72
+    },
+    "SHOPUSDT": {
+      "start_time_utc": "2026-10-08 05:03:00",
+      "start_price": 166.34,
+      "start_volume": 0.0,
+      "high": 166.34,
+      "low": 166.34
+    },
+    "STRCUSDT": {
+      "start_time_utc": "2026-10-08 05:03:00",
+      "start_price": 99.49,
+      "start_volume": 0.0,
+      "high": 99.49,
+      "low": 99.49
+    },
+    "FOLKSUSDT": {
+      "start_time_utc": "2026-10-08 05:06:00",
+      "start_price": 2.301,
+      "start_volume": 472.2196,
+      "high": 2.302,
+      "low": 2.299
+    },
+    "OPENUSDT": {
+      "start_time_utc": "2026-10-08 05:03:00",
+      "start_price": 0.1144,
+      "start_volume": 4255.1572,
+      "high": 0.1145,
+      "low": 0.1142
+    },
+    "SWARMSUSDT": {
+      "start_time_utc": "2026-10-08 05:03:00",
+      "start_price": 0.008254,
+      "start_volume": 1498.263624,
+      "high": 0.008254,
+      "low": 0.00822
+    },
+    "KOUSDT": {
+      "start_time_utc": "2026-10-08 05:07:00",
+      "start_price": 86.15,
+      "start_volume": 0.0,
+      "high": 86.15,
+      "low": 86.15
+    },
+    "HUSDT": {
+      "start_time_utc": "2026-10-08 05:07:00",
+      "start_price": 0.06806,
+      "start_volume": 1187.20218,
+      "high": 0.06809,
+      "low": 0.06803
+    },
+    "TNSRUSDT": {
+      "start_time_utc": "2026-10-08 05:04:00",
+      "start_price": 0.03801,
+      "start_volume": 437.644205,
+      "high": 0.03806,
+      "low": 0.03799
+    },
+    "LABUSDT": {
+      "start_time_utc": "2026-10-08 05:07:00",
+      "start_price": 0.05027,
+      "start_volume": 4368.79466,
+      "high": 0.05038,
+      "low": 0.05024
+    },
+    "PTBUSDT": {
+      "start_time_utc": "2026-10-08 05:03:00",
+      "start_price": 0.0008845,
+      "start_volume": 1085.4706619,
+      "high": 0.0008845,
+      "low": 0.0008825
+    },
+    "REDUSDT": {
+      "start_time_utc": "2026-10-08 05:03:00",
+      "start_price": 0.1499,
+      "start_volume": 1935.7568,
+      "high": 0.1499,
+      "low": 0.1494
+    },
+    "GDXUSDT": {
+      "start_time_utc": "2026-10-08 05:07:00",
+      "start_price": 86.22,
+      "start_volume": 6.0354,
+      "high": 86.22,
+      "low": 86.22
+    }
+  }
+}

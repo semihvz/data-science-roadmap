@@ -15,7 +15,7 @@ const modulesData = [
       "North Star Metric ve Funnel Analiz Temelleri"
     ],
     chips: ["Business", "KPI", "Metrics", "Strategy"],
-    pdfPath: "data-analyst/Veri_Analisti_Modul_1_Is_Problemi_KPI.pdf"
+    pdfPath: "../data-analyst/Veri_Analisti_Modul_1_Is_Problemi_KPI.pdf"
   },
   {
     id: "da-2",
@@ -30,7 +30,7 @@ const modulesData = [
       "What-If Analizi ve Finansal Modelleme"
     ],
     chips: ["Excel", "Pivot", "Modeling", "Spreadsheets"],
-    pdfPath: "data-analyst/Veri_Analisti_Modul_2_Excel_Ayrintili.pdf"
+    pdfPath: "../data-analyst/Veri_Analisti_Modul_2_Excel_Ayrintili.pdf"
   },
   {
     id: "da-3",
@@ -45,7 +45,7 @@ const modulesData = [
       "ETL İşlem Adımları ve Veri Dönüştürme"
     ],
     chips: ["Data Quality", "ETL", "Cleansing", "Fundamentals"],
-    pdfPath: "data-analyst/Veri_Analisti_Modul_3_Veri_Temelleri_Ayrintili.pdf"
+    pdfPath: "../data-analyst/Veri_Analisti_Modul_3_Veri_Temelleri_Ayrintili.pdf"
   },
   {
     id: "da-4",
@@ -60,7 +60,7 @@ const modulesData = [
       "Veritabanı Şeması ve Veri Tipleri Tasarımı"
     ],
     chips: ["Database", "ERD", "Normalization", "Architecture"],
-    pdfPath: "data-analyst/Veri_Analisti_Modul_4_Iliskisel_Veritabanlari_Ayrintili.pdf"
+    pdfPath: "../data-analyst/Veri_Analisti_Modul_4_Iliskisel_Veritabanlari_Ayrintili.pdf"
   },
   {
     id: "da-5",
@@ -75,7 +75,7 @@ const modulesData = [
       "ORDER BY ve LIMIT ile Veri Sıralama"
     ],
     chips: ["SQL", "Queries", "Filtering", "Aggregations"],
-    pdfPath: "data-analyst/Veri_Analisti_Modul_5_SQL_Temel_Ayrintili.pdf"
+    pdfPath: "../data-analyst/Veri_Analisti_Modul_5_SQL_Temel_Ayrintili.pdf"
   },
   {
     id: "da-6",
@@ -90,7 +90,7 @@ const modulesData = [
       "HAVING vs WHERE Farkı ve Mantıksal Yapılar"
     ],
     chips: ["SQL", "Joins", "Subqueries", "Relational"],
-    pdfPath: "data-analyst/Veri_Analisti_Modul_6_SQL_Orta_Ayrintili.pdf"
+    pdfPath: "../data-analyst/Veri_Analisti_Modul_6_SQL_Orta_Ayrintili.pdf"
   },
   {
     id: "da-7",
@@ -105,7 +105,7 @@ const modulesData = [
       "Index Optimizasyonu ve Query Execution Plan"
     ],
     chips: ["SQL", "Window Functions", "CTE", "Performance"],
-    pdfPath: "data-analyst/Veri_Analisti_Modul_7_SQL_Ileri_Ayrintili.pdf"
+    pdfPath: "../data-analyst/Veri_Analisti_Modul_7_SQL_Ileri_Ayrintili.pdf"
   },
   {
     id: "da-8",
@@ -120,7 +120,7 @@ const modulesData = [
       "p-value, t-testi, Z-testi ve Hipotez Testi"
     ],
     chips: ["Statistics", "Probability", "Hypothesis", "Math"],
-    pdfPath: "data-analyst/Veri_Analisti_Modul_8_Istatistik_Ayrintili.pdf"
+    pdfPath: "../data-analyst/Veri_Analisti_Modul_8_Istatistik_Ayrintili.pdf"
   },
   {
     id: "da-9",
@@ -135,7 +135,7 @@ const modulesData = [
       "Kapsamlı Exploratory Data Analysis (EDA) Süreçleri"
     ],
     chips: ["Python", "Pandas", "NumPy", "EDA"],
-    pdfPath: "data-analyst/Veri_Analisti_Modul_9_Python_Ayrintili.pdf"
+    pdfPath: "../data-analyst/Veri_Analisti_Modul_9_Python_Ayrintili.pdf"
   },
   {
     id: "da-10",
@@ -150,7 +150,7 @@ const modulesData = [
       "Plotly ile Etkileşimli Dashboard ve Grafikler"
     ],
     chips: ["Visualization", "Plotly", "Seaborn", "Charts"],
-    pdfPath: "data-analyst/Veri_Analisti_Modul_10_Gorsellestirme_Ayrintili.pdf"
+    pdfPath: "../data-analyst/Veri_Analisti_Modul_10_Gorsellestirme_Ayrintili.pdf"
   },
   {
     id: "da-11",
@@ -165,7 +165,7 @@ const modulesData = [
       "İleri DAX (CALCULATE, ALL, FILTER, Time Intelligence)"
     ],
     chips: ["Power BI", "DAX", "Business Intelligence", "Dashboards"],
-    pdfPath: "data-analyst/Veri_Analisti_Modul_11_Power_BI_Ayrintili.pdf"
+    pdfPath: "../data-analyst/Veri_Analisti_Modul_11_Power_BI_Ayrintili.pdf"
   },
   {
     id: "da-12",
@@ -180,7 +180,7 @@ const modulesData = [
       "Dönüşüm Hunisi (Funnel) ve Kayıp Müşteri (Churn) Analizi"
     ],
     chips: ["RFM", "Cohort", "Churn", "Customer Analytics"],
-    pdfPath: "data-analyst/Veri_Analisti_Modul_12_Analitik_Teknikler_Ayrintili.pdf"
+    pdfPath: "../data-analyst/Veri_Analisti_Modul_12_Analitik_Teknikler_Ayrintili.pdf"
   },
   {
     id: "da-13",
@@ -195,7 +195,7 @@ const modulesData = [
       "Python Script Otomasyonu ve İş Akışları"
     ],
     chips: ["AI Analytics", "LLM", "Automation", "Prompting"],
-    pdfPath: "data-analyst/Veri_Analisti_Modul_13_AI_Destekli_Analiz_Ayrintili.pdf"
+    pdfPath: "../data-analyst/Veri_Analisti_Modul_13_AI_Destekli_Analiz_Ayrintili.pdf"
   },
   {
     id: "da-14",
@@ -210,7 +210,7 @@ const modulesData = [
       "Kelimelerle ve Görsellerle Etkili İletişim"
     ],
     chips: ["Storytelling", "Communication", "Executive", "Soft Skills"],
-    pdfPath: "data-analyst/Veri_Analisti_Modul_14_Iletisim_Ayrintili.pdf"
+    pdfPath: "../data-analyst/Veri_Analisti_Modul_14_Iletisim_Ayrintili.pdf"
   },
   {
     id: "da-15",
@@ -225,7 +225,7 @@ const modulesData = [
       "SQL & Analitik Case Study Mülakat Stratejileri"
     ],
     chips: ["Portfolio", "Career", "Interview", "GitHub"],
-    pdfPath: "data-analyst/Veri_Analisti_Modul_15_Portfolio_Mulakat_Ayrintili.pdf"
+    pdfPath: "../data-analyst/Veri_Analisti_Modul_15_Portfolio_Mulakat_Ayrintili.pdf"
   },
 
   // --- DATA SCIENTIST TRACK ---
@@ -242,7 +242,7 @@ const modulesData = [
       "Baseline Model ve ROI Hesaplama"
     ],
     chips: ["Business Problem", "ML Metrics", "Problem Formulation"],
-    pdfPath: "data-scientist/01_Is_Problemi_KPI_Ayrintili_Konu_Anlatimi.pdf"
+    pdfPath: "../data-scientist/01_Is_Problemi_KPI_Ayrintili_Konu_Anlatimi.pdf"
   },
   {
     id: "ds-2",
@@ -257,7 +257,7 @@ const modulesData = [
       "Modüler Python Kütüphane Yapısı Oluşturma"
     ],
     chips: ["Python", "OOP", "Software Engineering", "Algorithms"],
-    pdfPath: "data-scientist/02_Python_Temelleri_Ayrintili_Konu_Anlatimi.pdf"
+    pdfPath: "../data-scientist/02_Python_Temelleri_Ayrintili_Konu_Anlatimi.pdf"
   },
   {
     id: "ds-3",
@@ -272,7 +272,7 @@ const modulesData = [
       "High-Performance Computation & Memory Layout"
     ],
     chips: ["NumPy", "Linear Algebra", "Vectorization", "Performance"],
-    pdfPath: "data-scientist/03_NumPy_Ayrintili_Konu_Anlatimi.pdf"
+    pdfPath: "../data-scientist/03_NumPy_Ayrintili_Konu_Anlatimi.pdf"
   },
   {
     id: "ds-4",
@@ -287,7 +287,7 @@ const modulesData = [
       "Minimum Detectable Effect (MDE) ve Novelty Effect"
     ],
     chips: ["A/B Testing", "Experimentation", "Statistics", "Product"],
-    pdfPath: "data-scientist/11_AB_Testing_Ayrintili_Konu_Anlatimi.pdf"
+    pdfPath: "../data-scientist/11_AB_Testing_Ayrintili_Konu_Anlatimi.pdf"
   },
   {
     id: "ds-5",
@@ -302,7 +302,7 @@ const modulesData = [
       "Overfitting, Regularization (L1/L2) ve Hyperparameter Tuning"
     ],
     chips: ["Machine Learning", "Scikit-Learn", "XGBoost", "Algorithms"],
-    pdfPath: "data-scientist/14_Machine_Learning_Temelleri_Ayrintili_Konu_Anlatimi.pdf"
+    pdfPath: "../data-scientist/14_Machine_Learning_Temelleri_Ayrintili_Konu_Anlatimi.pdf"
   },
   {
     id: "ds-6",
@@ -317,7 +317,7 @@ const modulesData = [
       "Veri Gizliliği (GDPR, KVKK, Anonymization)"
     ],
     chips: ["Data Ethics", "Governance", "SHAP", "Privacy"],
-    pdfPath: "data-scientist/44_Data_Ethics_Governance_Ayrintili_Konu_Anlatimi.pdf"
+    pdfPath: "../data-scientist/44_Data_Ethics_Governance_Ayrintili_Konu_Anlatimi.pdf"
   },
   {
     id: "ds-7",
@@ -332,7 +332,7 @@ const modulesData = [
       "README, Dokümantasyon ve Proje Sergileme"
     ],
     chips: ["GitHub", "Portfolio", "Clean Code", "Docker"],
-    pdfPath: "data-scientist/46_Portfolio_GitHub_Ayrintili_Konu_Anlatimi.pdf"
+    pdfPath: "../data-scientist/46_Portfolio_GitHub_Ayrintili_Konu_Anlatimi.pdf"
   },
   {
     id: "ds-8",
@@ -347,7 +347,7 @@ const modulesData = [
       "Behavioral & Problem Solving Case Study Mülakatları"
     ],
     chips: ["Interview", "Career", "Live Coding", "Problem Solving"],
-    pdfPath: "data-scientist/47_Data_Science_Interview_Ayrintili_Konu_Anlatimi.pdf"
+    pdfPath: "../data-scientist/47_Data_Science_Interview_Ayrintili_Konu_Anlatimi.pdf"
   },
   {
     id: "ds-9",
@@ -362,7 +362,7 @@ const modulesData = [
       "Data Drift, Concept Drift ve Model Monitoring"
     ],
     chips: ["System Design", "MLSys", "MLOps", "Architecture"],
-    pdfPath: "data-scientist/48_System_Design_for_ML_Ayrintili_Konu_Anlatimi.pdf"
+    pdfPath: "../data-scientist/48_System_Design_for_ML_Ayrintili_Konu_Anlatimi.pdf"
   }
 ];
 

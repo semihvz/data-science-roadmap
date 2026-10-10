@@ -14,5 +14,8 @@ dist/
 
 # Data & Databases
 *.db
+*.sqlite
 projects/data-backtest/raw_data/
+projects/data-backtest/output_db/
+projects/data-backtest/db_benchmark/
 projects/data-backtest/simulator_server/build/

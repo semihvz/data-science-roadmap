@@ -1,8 +1,10 @@
 # Data Science & Data Analyst Mastery Roadmap 🚀
 
-Veri Analizi ve Veri Bilimi alanlarında sıfırdan uzmanlığa uzanan 23 kapsamlı ders modülü, PDF içerikleri, müfredatlar ve interaktif öğrenim portföyü.
+Veri Analizi ve Veri Bilimi alanlarında sıfırdan uzmanlığa uzanan 24 kapsamlı ders modülü, PDF içerikleri, müfredatlar ve interaktif öğrenim portföyü.
 
 🌐 **Canlı Web Sitesi (GitHub Pages)**: [https://semihvz.github.io/data-science-roadmap/](https://semihvz.github.io/data-science-roadmap/)
+
+> 📁 **Web Sitesi Klasörü**: Tüm web sitesi kodları (`index.html`, `css/`, `js/`) [`docs/`](./docs) klasöründe toplanmıştır. GitHub Pages üzerinden `Settings > Pages > Branch: main /docs` seçeneği ile doğrudan sunulur.
 
 ---
 
@@ -26,9 +28,10 @@ Veri Analizi ve Veri Bilimi alanlarında sıfırdan uzmanlığa uzanan 23 kapsam
 - **Modül 15**: Portföy Oluşturma & Mülakat Hazırlığı
 - 📄 [data-analyst-curriculum.pdf](./data-analyst-curriculum.pdf)
 
-### 🔬 2. Data Scientist Track (8 Modül)
+### 🔬 2. Data Scientist Track (9 Modül)
 - **DS-01**: İş Problemi & KPI Tanımlama (DS Perspektifi)
 - **DS-02**: Python Temelleri & Nesne Yönelimli Programlama (OOP)
+- **DS-03**: NumPy & Vektörel Hesaplama Teknikleri
 - **DS-11**: A/B Testing & Deneysel Tasarım
 - **DS-14**: Machine Learning Temelleri & Modelleme
 - **DS-44**: Data Ethics, Governance & Privacy
@@ -41,11 +44,9 @@ Veri Analizi ve Veri Bilimi alanlarında sıfırdan uzmanlığa uzanan 23 kapsam
 
 ## 💻 Web Sitesini Yerelde Çalıştırma
 
-Projede bağımlılık kurulumu gerekmez. Doğrudan `index.html` dosyasını tarayıcınızda açabilir veya bir statik sunucu başlatabilirsiniz:
-
 ```bash
-# Python varsayılan HTTP sunucusu ile çalıştırmak için:
-python3 -m http.server 8000
+# Web sitesi docs/ klasöründedir:
+python3 -m http.server 8000 --directory docs
 ```
 
 Daha sonra tarayıcınızda `http://localhost:8000` adresine gidebilirsiniz.
