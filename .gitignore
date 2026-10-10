@@ -1,0 +1,18 @@
+# OS & Editor
+.DS_Store
+*.swp
+*.tmp
+.vscode/
+.idea/
+
+# Python & Build
+__pycache__/
+*.pyc
+build/
+dist/
+*.egg-info/
+
+# Data & Databases
+*.db
+projects/data-backtest/raw_data/
+projects/data-backtest/simulator_server/build/
