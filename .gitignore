@@ -15,10 +15,8 @@ dist/
 # Data & Databases
 *.db
 *.sqlite
-*.parquet
 projects/data-backtest/raw_data/
 projects/data-backtest/output_db/
 projects/data-backtest/db_benchmark/
 projects/data-backtest/simulator_server/build/
 projects/brazilian-ecommerce-analytics/data/raw/
-projects/brazilian-ecommerce-analytics/data/processed/

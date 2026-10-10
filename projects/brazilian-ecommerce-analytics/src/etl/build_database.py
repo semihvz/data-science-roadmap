@@ -21,7 +21,6 @@ logger = logging.getLogger("OlistETL")
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 RAW_DIR = BASE_DIR / "data" / "raw"
-PROCESSED_DIR = BASE_DIR / "data" / "processed"
 DB_PATH = BASE_DIR / "data" / "olist.db"
 SQL_DIR = BASE_DIR / "sql"
 
@@ -37,7 +36,6 @@ def check_or_download_data():
 def run_etl():
     logger.info(f"Starting ETL Pipeline. Base dir: {BASE_DIR}")
     check_or_download_data()
-    PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     
     if DB_PATH.exists():
         logger.info(f"Removing existing database at {DB_PATH}")
@@ -146,19 +144,8 @@ def run_etl():
         count = cursor.execute(f"SELECT COUNT(*) FROM {view}").fetchone()[0]
         logger.info(f"  ✓ {view}: {count:,} rows")
 
-    # 12. Create fast parquet snapshots for Python analytical modules
-    logger.info("Generating fast Parquet caches in data/processed/...")
-    df_orders_summary = pd.read_sql_query("SELECT * FROM vw_orders_summary", conn)
-    df_orders_summary.to_parquet(PROCESSED_DIR / "orders_summary.parquet", index=False)
-
-    df_rfm_raw = pd.read_sql_query("SELECT * FROM vw_customer_rfm_raw", conn)
-    df_rfm_raw.to_parquet(PROCESSED_DIR / "customer_rfm_raw.parquet", index=False)
-
-    df_category = pd.read_sql_query("SELECT * FROM vw_category_sales", conn)
-    df_category.to_parquet(PROCESSED_DIR / "category_sales.parquet", index=False)
-
     conn.close()
-    logger.info("ETL Pipeline completed successfully! Database ready at data/olist.db")
+    logger.info("ETL Pipeline completed successfully! 100% Relational SQL Database ready at data/olist.db")
 
 
 if __name__ == "__main__":

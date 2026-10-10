@@ -209,8 +209,7 @@ Tarayıcınızda `http://localhost:8501` adresine giderek interaktif paneli kull
 projects/brazilian-ecommerce-analytics/
 ├── data/
 │   ├── raw/                 # Kaggle Olist CSV veri setleri (9 dosya)
-│   ├── processed/           # Hızlı Parquet tabloları
-│   └── olist.db             # İndekslenmiş SQLite ilişkisel veritabanı
+│   └── olist.db             # İndekslenmiş SQLite ilişkisel veritabanı (100% Saf SQL Mimarisi)
 ├── sql/
 │   ├── schema.sql           # DDL şeması ve indeks tanımları
 │   ├── analytical_views.sql # Yıldız şema tarzı analitik görünümler (Views)

@@ -25,7 +25,6 @@ from src.analytics.payments_finance import compute_payment_method_breakdown, ana
 from src.analytics.product_intelligence import compute_category_pareto, top_categories_metrics
 
 DB_PATH = BASE_DIR / "data" / "olist.db"
-PROCESSED_DIR = BASE_DIR / "data" / "processed"
 
 # Page config
 st.set_page_config(
